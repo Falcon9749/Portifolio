@@ -5,16 +5,25 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         transitionElement.classList.add('fade-out');
     }, 500);
-
-    function navigate(url) {
-        transitionElement.classList.remove('fade-out');
-
-        setTimeout(() => {
-            window.location.replace(url);
-        }, 500);
-    }
-
-    window.sobre = () => navigate('index.html');
-    window.projetos = () => navigate('projetos.html');
-    window.contatos = () => navigate('contatos.html');
 });
+
+function animateAndNavigate(targetUrl) {
+    const transitionElement = document.querySelector('.transition-fade');
+    transitionElement.classList.remove('fade-out');
+
+    setTimeout(() => {
+        window.location.replace(targetUrl);
+    }, 300);
+}
+
+function sobre() {
+    animateAndNavigate('index.html');
+}
+
+function projetos() {
+    animateAndNavigate('projetos.html');
+}
+
+function contatos() {
+    animateAndNavigate('contatos.html');
+}

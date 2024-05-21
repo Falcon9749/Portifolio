@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -102,6 +108,28 @@ a {
     background: linear-gradient(rgb(255, 251, 0), rgb(0, 110, 255), yellow);
     background-repeat: no-repeat;
     height: 100vh;
+}
+
+/* Media Queries para responsividade */
+@media (min-width: 600px) {
+    main {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    section {
+        flex: 1;
+    }
+}
+
+@media (min-width: 900px) {
+    header, footer {
+        padding: 2rem;
+    }
+
+    nav ul li {
+        margin: 0 2rem;
+    }
 }
 
 /* .body_fundo_projetos {
