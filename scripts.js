@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     }
 
-    window.sobre = () => navigate('sobre.html');
+    window.sobre = () => navigate('index.html');
     window.projetos = () => navigate('projetos.html');
     window.contatos = () => navigate('contatos.html');
 });
