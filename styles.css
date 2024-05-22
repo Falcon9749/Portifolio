@@ -115,7 +115,7 @@ a {
 .body_fundo {
     background: linear-gradient(rgb(255, 251, 0), rgb(0, 110, 255), yellow);
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100vb;
 }
 
 /* Media Queries para responsividade */
