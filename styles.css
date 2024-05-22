@@ -80,7 +80,7 @@ footer {
 table {
     border-collapse: collapse;
     width: 100%;
-    max-width: 600px;
+    max-width: 70%;
     margin: 0 auto;
     font-family: Arial, sans-serif;
 }
