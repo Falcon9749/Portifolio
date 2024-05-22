@@ -84,7 +84,7 @@ table {
     margin: 0 auto;
     font-family: Arial, sans-serif;
 }
-th, td {
+th, td{
     border: 2px solid #dddddd;
     text-align: left;
     padding: 8px;
@@ -98,6 +98,14 @@ tr {
 a {
     text-decoration: none;
     color: #007bff;
+}
+
+.link {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
 }
 
 .icone {
