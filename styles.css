@@ -30,7 +30,7 @@ body.fade-out {
     cursor: pointer;
     transition: color 0.3s, transform 0.3s;
     display: inline;
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 /* .menu {
