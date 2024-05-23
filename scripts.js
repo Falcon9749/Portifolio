@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const transitionElement = document.querySelector('.transition-fade');
 
-    // Remover a animação ao carregar a página
+    // Adicionar animação de entrada ao carregar a página
     setTimeout(() => {
         transitionElement.classList.add('fade-out');
     }, 500);
@@ -9,11 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function animateAndNavigate(targetUrl) {
     const transitionElement = document.querySelector('.transition-fade');
-    transitionElement.classList.remove('fade-out');
+    const clickSound = document.getElementById('click-sound');
 
+    // Tocar som de clique
+    clickSound.play();
+
+    // Adicionar classe para fade-in
+    transitionElement.classList.remove('fade-out');
+    transitionElement.classList.add('fade-in');
+
+    // Esperar a animação antes de navegar
     setTimeout(() => {
         window.location.replace(targetUrl);
-    }, 300);
+    }, 500);
 }
 
 function sobre() {
