@@ -1,27 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const transitionElement = document.querySelector('.transition-fade');
+    const transitionElement = document.querySelector('.page-transition');
 
     // Adicionar animação de entrada ao carregar a página
     setTimeout(() => {
-        transitionElement.classList.add('fade-out');
+        transitionElement.style.transform = 'none';
     }, 500);
 });
 
 function animateAndNavigate(targetUrl) {
-    const transitionElement = document.querySelector('.transition-fade');
+    const transitionElement = document.querySelector('.page-transition');
     const clickSound = document.getElementById('click-sound');
 
-    // Tocar som de clique
+
+    setTimeout(() => {
+        window.location.replace(targetUrl);
+    }, 300);// Tocar som de clique
     clickSound.play();
 
-    // Adicionar classe para fade-in
-    transitionElement.classList.remove('fade-out');
-    transitionElement.classList.add('fade-in');
+    console.log('Iniciando animação de virar página');
+    
+    // Adicionar classe para animação de virar a página
+    transitionElement.classList.add('page-flip');
 
     // Esperar a animação antes de navegar
     setTimeout(() => {
+        console.log('Navegando para:', targetUrl);
         window.location.replace(targetUrl);
-    }, 500);
+    }, 800);
 }
 
 function sobre() {

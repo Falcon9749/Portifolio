@@ -1,49 +1,3 @@
-.transition-fade {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    transition: opacity 0.5s ease;
-    z-index: 1000;
-    pointer-events: none;
-}
-
-.fade-out {
-    opacity: 0;
-}
-
-.fade-in {
-    opacity: 1;
-}
-
-body {
-    transition: opacity 0.5s ease;
-}
-
-body.fade-out {
-    opacity: 0;
-}
-
-.menu {
-    cursor: pointer;
-    transition: color 0.3s, transform 0.3s;
-    display: inline;
-    margin-right: 35px;
-}
-
-/* .menu {
-    display: inline;
-    margin-right: 30px;
-    cursor: pointer;
-} */
-
-.menu:hover {
-    color: #007BFF;
-    transform: scale(1.1);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -67,10 +21,20 @@ body {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     z-index: 1000;
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.page-flip {
+    transform: perspective(2000px) rotateY(-180deg);
 }
 
 .transition-fade.fade-out {
     opacity: 0;
+}
+
+.menu:hover {
+    color: #007BFF;
+    transform: scale(1.1);
 }
 
 .content {
@@ -90,11 +54,11 @@ body {
 }
 
 
-/* .menu {
+.menu {
     display: inline;
-    margin-right: 30px;
+    margin-right: 35px;
     cursor: pointer;
-} */
+}
 
 .titulo-pagina {
     text-align: center;
@@ -163,6 +127,10 @@ a {
     width: 20px;
 }
 
+.titulo-pagina, .sobre-mim, .tecnologias li {
+    animation: fadeInUp 3s ease;
+}
+
 .body_fundo {
     background: linear-gradient(rgb(255, 251, 0), rgb(0, 110, 255), yellow);
     background-repeat: no-repeat;
@@ -191,8 +159,13 @@ a {
     }
 }
 
-/* .body_fundo_projetos {
-    background: linear-gradient(rgb(255, 251, 0), rgb(0, 110, 255), yellow);
-    background-repeat: no-repeat;
-    height: 100vh;
-} */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
