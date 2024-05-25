@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function animateAndNavigate(targetUrl) {
     const transitionElement = document.querySelector('.page-transition');
-    const clickSound = document.getElementById('click-sound');
+    // const clickSound = document.getElementById('click-sound');
 
 
     setTimeout(() => {
