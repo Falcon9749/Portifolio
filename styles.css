@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.transition-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.page-flip {
+    transform: perspective(2000px) rotateY(-180deg);
+}
+
+.transition-fade.fade-out {
+    opacity: 0;
+}
+
+.menu:hover {
+    color: #007BFF;
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+
+.menu {
+    display: inline;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.titulo-pagina {
+    text-align: center;
+}
+
+.div-image {
+    text-align: center;
+}
+
+.image-pagina {
+    width: 50%;
+}
+
+.sobre-mim {
+    text-align: center;
+    color: blue;
+}
+
+.tecnologias {
+    list-style: none;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+th, td{
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr {
+    background-color: #f9f9f9;
+}
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.link {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.icone {
+    width: 20px;
+}
+
+.titulo-pagina, .sobre-mim, .tecnologias li {
+    animation: fadeInUp 3s ease;
+}
+
+.body_fundo {
+    background: linear-gradient(rgb(255, 251, 0), rgb(0, 110, 255), yellow);
+    background-repeat: no-repeat;
+    height: 100vb;
+}
+
+/* Media Queries para responsividade */
+@media (min-width: 600px) {
+    main {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    section {
+        flex: 1;
+    }
+}
+
+@media (min-width: 900px) {
+    header, footer {
+        padding: 2rem;
+    }
+
+    nav ul li {
+        margin: 0 2rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
