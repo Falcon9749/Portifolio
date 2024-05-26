@@ -137,6 +137,10 @@ a {
     height: 100vb;
 }
 
+.formulario {
+    text-align: center;
+}
+
 /* Media Queries para responsividade */
 @media (min-width: 600px) {
     main {
